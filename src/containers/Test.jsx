@@ -28,10 +28,6 @@ class Test extends Component {
 			</div>
 		);
 	}
-
-	componentWillMount() {
-		console.log('mounted');
-	}
 }
 
 const mapStateToProps = (state) => {
