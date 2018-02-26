@@ -16,16 +16,19 @@ class Test extends Component {
 	render() {
 		return (
 			<div>
-				<div>Test</div>
 				<div>
 					Component State: { this.state.test }
 				</div>
 				<div>
 					Redux State: { this.props.test.data }
 				</div>
-				<Button onClick={ () => this.props.addOne() && this.setState({test: this.state.test + 1}) }>Add another Onez</Button>
+				<Button onClick={ () => this.props.addOne() && this.setState({test: this.state.test + 1}) }>Update State</Button>
 			</div>
 		);
+	}
+
+	componentWillMount() {
+		console.log('mounted');
 	}
 }
 
